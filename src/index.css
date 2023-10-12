@@ -12,4 +12,20 @@
 body {
   min-height: 100svh;
   font-family: var(--ff-primary);
+  max-width: 1440px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  padding-inline: 0;
+  list-style-type: none;
+}
+
+/* themes */
+.default {
+  --bg-primary: white;
 }

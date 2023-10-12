@@ -1,0 +1,69 @@
+.header * {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  align-items: center;
+  border: 1px solid lime;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  border: none;
+  padding: 1em 2em;
+  transition: all 200ms;
+  border-right: 1px solid black;
+}
+
+.logo a {
+  align-items: center;
+  border: 2px dashed transparent;
+  display: flex;
+  outline: 2px dashed transparent;
+  padding-inline: 5px;
+}
+
+.logo img {
+  margin-right: 0.25rem;
+}
+
+.logo .logoTxt {
+  font-family: var(--ff-logo);
+  font-size: 2rem;
+}
+
+.logo a:hover {
+  border-color: hsl(240, 100%, 50%);
+  outline-color: rgb(92, 193, 226);
+}
+
+.logo a:hover .logoTxt {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.logo a:active {
+  outline: none;
+}
+
+.logo a:active .logoTxt {
+  filter: none;
+}
+
+/* ----------- nav --------------- */
+.navBar {
+  align-items: center;
+  display: flex;
+}
+
+.navBar ul {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.searchBtn {
+  all: unset;
+  padding: 0.5em;
+}

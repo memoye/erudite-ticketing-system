@@ -1,2 +1,6 @@
 .root {
+  background: var(--bg-primary);
+  color: var(--col-primary, black);
+  min-height: 100svh;
+  transition: background 500ms ease-out;
 }

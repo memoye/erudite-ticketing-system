@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import './Root.css'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
+import { Header } from "../../components";
+// import Header from "../../components/Header/Header";
 
 
 const theme = 'default'
@@ -8,7 +10,7 @@ const theme = 'default'
 export default function Root() {
     return (
         <div className={ classNames('root', theme) }>
-            This is the root route!
+            <Header />
             <main>
                 <Outlet />
             </main>
