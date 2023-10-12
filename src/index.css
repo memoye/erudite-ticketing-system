@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Orbitron:wght@800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-logo: "Orbitron", sans-serif;
+  --ff-primary: "Comfortaa", sans-serif;
+}
+
+body {
+  min-height: 100svh;
+  font-family: var(--ff-primary);
+}
