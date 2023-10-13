@@ -67,3 +67,30 @@
   all: unset;
   padding: 0.5em;
 }
+
+.searchBar {
+  position: absolute;
+  background: rgba(71, 118, 71, 0.39);
+  display: flex;
+  height: 5.15rem;
+  left: 50%;
+  place-items: center;
+  text-align: center;
+  transform: translateX(-50%);
+  transition: top 200ms;
+  width: 100%;
+}
+.searchBarClose {
+  top: -10rem;
+}
+
+.searchBarOpen {
+  top: 0;
+}
+
+.searchBar div {
+  margin: auto;
+}
+
+.searchInput {
+}

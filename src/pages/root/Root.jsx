@@ -14,6 +14,8 @@ export default function Root() {
             <main>
                 <Outlet />
             </main>
+            <footer>
+            </footer>
         </div>
     )
 }

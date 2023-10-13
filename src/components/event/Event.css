@@ -1,0 +1,79 @@
+.event {
+  border: 1px solid red;
+}
+
+.eventSkeleton {
+  box-sizing: border-box;
+  width: 90vw;
+  max-width: 300px;
+  border-radius: 15px;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.eventSkeleton .skeletonTxtArea {
+  text-align: center;
+}
+
+.eventSkeleton .skeletonImg {
+  min-height: 150px;
+  border-radius: 10px;
+  margin-bottom: 0.75em;
+  padding-top: 10px;
+}
+
+.eventSkeleton .skeletonTitle {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 0.6rem;
+  border-radius: 2px;
+  margin: auto;
+  margin-bottom: 0.5em;
+}
+
+.eventSkeleton .skeletonTxt {
+  box-sizing: border-box;
+  padding: 0.25rem;
+  width: 25%;
+  display: inline-block;
+  margin-bottom: 0.25em;
+}
+
+.eventSkeleton .long {
+  width: 60%;
+  margin-left: 1rem;
+}
+
+.eventSkeleton .short {
+  width: 50%;
+}
+
+.eventSkeleton .price {
+  box-sizing: border-box;
+  background-color: var(--bg-primary);
+  border-radius: 20px;
+  padding: 0.85rem;
+  width: 20%;
+  margin-left: 75%;
+}
+
+.eventSkeleton .skeletonBtns {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.eventSkeleton .skeletonBtns .skeletonCta {
+  box-sizing: border-box;
+
+  padding: 1rem;
+  width: 30%;
+  border-radius: 2px;
+}
+
+.eventSkeleton .amtLeft {
+  padding: 0.4rem;
+}

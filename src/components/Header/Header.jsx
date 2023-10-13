@@ -15,7 +15,15 @@ export default function Header() {
                     <span className="logoTxt">ERUDITE!</span>
                 </Link>
             </div>
+
+
+
             <NavBar />
+
+            <div className=''>
+                <button>Create event</button>
+                <Link>Login</Link>
+            </div>
         </header>
     )
 }

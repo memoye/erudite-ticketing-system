@@ -1,0 +1,41 @@
+.skeleton {
+  --col-light: #dfdfdf;
+  --col-mid: #bfbfbf;
+  --col-dark: #a3a3a3;
+  animation: flicker var(--_duration) ease-out infinite alternate;
+}
+
+.light {
+  background-color: var(--col-light);
+}
+
+.mid {
+  background-color: var(--col-mid);
+}
+
+.dark {
+  background-color: var(--col-dark);
+}
+
+/* ------- Speed ----------- */
+
+.fast {
+  --_duration: 300ms;
+}
+
+.slow {
+  --_duration: 600ms;
+}
+
+.verySlow {
+  --_duration: 0.8s;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
