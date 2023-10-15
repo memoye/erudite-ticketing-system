@@ -5,8 +5,9 @@ import samplePoster from '../../assets/img.jpg'
 import classNames from "classnames"
 import { useEffect, useRef } from "react"
 import { HiLocationMarker } from "react-icons/hi"
-import { BsCalendarEvent, BsClock } from "react-icons/bs"
-import { formatDate } from "../../utils"
+import { BsCalendarEvent, BsCart, BsClock, BsTicket } from "react-icons/bs"
+import { BiPurchaseTagAlt } from "react-icons/bi"
+import { formatDate, formatTimeTo12HourClock } from "../../utils"
 
 const example = {
     eventId: '1',
@@ -60,8 +61,8 @@ export default function Event() {
     // }, [])
 
     return (
-        <>
-            <EventSkeleton />
+        <div className="event">
+            {/* <EventSkeleton /> */ }
 
             <div className="eventCard">
                 <div
@@ -69,6 +70,7 @@ export default function Event() {
                     ref={ posterRef }
                 >
                     <img src={ eventPoster || 'https://source.unsplash.com/random/?event' } alt="event poster" loading="lazy" />
+                    <div className="gradientOverlay" />
                     <span className={ classNames('ticketType cardTopItem', ticketType) }>
                         { ticketType }
                     </span>
@@ -76,7 +78,12 @@ export default function Event() {
                     <ul className="eventTags">
                         { eventTags?.map(tag => (<li className="eventTag" key={ tag.id }>{ tag.name }</li>)) }
                     </ul>
-                    <span className="cardTopItem location"><span>{ <HiLocationMarker className="infoIcon" /> }</span>{ eventLocation }</span>
+                    <span className="cardTopItem location">
+                        <span>
+                            { <HiLocationMarker className="infoIcon" /> }
+                        </span>
+                        { eventLocation }
+                    </span>
                 </div>
                 <div className="eventCardTxt">
                     <h3 className="eventTitle">{ eventName }</h3>
@@ -93,16 +100,21 @@ export default function Event() {
                             <span>
                                 { <BsClock className="infoIcon" /> }
                             </span>
-                            { }
+                            { formatTimeTo12HourClock(startTime) }
                         </p>
                     </div>
 
                 </div>
-                <div>
-                    <button>More details</button>
+                <div className="ticketActions">
+                    <button
+                        className="eventCta"
+                    >
+                        <BsTicket className="icon" />
+                        <span>Buy Ticket</span>
+                    </button>
                 </div>
-            </div>
-        </>
+            </div >
+        </div>
     )
 }
 

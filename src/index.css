@@ -26,16 +26,18 @@ ul {
 }
 
 /* themes */
-.light {
-  --bg-primary: rgb(36, 36, 36);
-  --card-col: rgba(183, 160, 44, 0.579);
-  --text-primary: white;
+.bright {
+  --bg-primary: white;
+  --card-col: rgba(243, 243, 243, 0.5);
   --text-secondary: rgb(154, 154, 154);
+  --text-primary: rgb(0, 0, 0);
+  --strokes-col: rgb(0, 0, 0);
 }
 
 .dark {
-  --bg-primary: black;
-  --card-col: rgba(183, 160, 44, 0.579);
-  --text-primary: white;
+  --text-primary: rgb(200, 200, 200);
+  --bg-primary: rgb(25, 25, 25);
+  --card-col: rgb(0, 0, 0);
   --text-secondary: rgb(154, 154, 154);
+  --strokes-col: rgb(255, 255, 255);
 }
