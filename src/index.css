@@ -26,6 +26,16 @@ ul {
 }
 
 /* themes */
-.default {
-  --bg-primary: white;
+.light {
+  --bg-primary: rgb(36, 36, 36);
+  --card-col: rgba(183, 160, 44, 0.579);
+  --text-primary: white;
+  --text-secondary: rgb(154, 154, 154);
+}
+
+.dark {
+  --bg-primary: black;
+  --card-col: rgba(183, 160, 44, 0.579);
+  --text-primary: white;
+  --text-secondary: rgb(154, 154, 154);
 }

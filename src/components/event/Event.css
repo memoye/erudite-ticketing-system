@@ -1,13 +1,126 @@
-.event {
-  border: 1px solid red;
+.eventCard {
+  box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  max-width: 350px;
+  min-height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+  padding: 5px;
+  /* background: var(--card-col); */
+  color: var(--text-primary);
 }
 
+.dark .eventCard {
+  border: 1px solid white;
+}
+
+.eventCardPoster {
+  border-radius: 5px;
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.eventCardPoster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 200ms ease;
+}
+
+.eventCard .eventCardPoster:hover img {
+  /* transition: object-position 200ms; */
+  transform: scale(103%);
+  /* object-position: var(--mouse-x) center; */
+}
+
+.eventTags {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  gap: 5px;
+  left: 10px;
+  position: absolute;
+}
+
+.eventTag {
+  backdrop-filter: blur(10px);
+  background: yellow;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  padding: 0.15em 0.5em;
+  transition: all 200ms;
+  width: fit-content;
+}
+
+.eventTag:hover {
+  opacity: 1;
+  font-weight: 800;
+}
+
+.cardTopItem {
+  color: white;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 1px;
+  padding: 0.25em;
+  position: absolute;
+  top: 10px;
+  font-weight: 700;
+}
+
+.ticketType {
+  background: gold;
+  color: black;
+  left: 10px;
+}
+
+.ticketPrice {
+  background: red;
+  right: 10px;
+}
+
+.eventTitle {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 1rem auto 0.5rem;
+  text-transform: capitalize;
+}
+
+.eventInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.eventInfo p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  line-height: 1;
+  padding: 0;
+}
+
+.infoIcon {
+  font-size: 1.25rem;
+}
+/* ------skeleton--------- */
 .eventSkeleton {
   box-sizing: border-box;
   width: 90vw;
-  max-width: 300px;
+  max-width: 350px;
   border-radius: 15px;
   padding: 5px;
+  margin: auto;
   padding-bottom: 10px;
 }
 
@@ -16,10 +129,19 @@
 }
 
 .eventSkeleton .skeletonImg {
-  min-height: 150px;
   border-radius: 10px;
+  display: grid;
   margin-bottom: 0.75em;
+  min-height: 150px;
   padding-top: 10px;
+}
+
+.eventSkeleton .skeletonImg > .tags {
+  align-self: end;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 5px;
 }
 
 .eventSkeleton .skeletonTitle {
@@ -55,6 +177,13 @@
   padding: 0.85rem;
   width: 20%;
   margin-left: 75%;
+  align-self: start;
+}
+
+.eventSkeleton .tag {
+  display: inline-block;
+  width: 20px;
+  padding: 4px;
 }
 
 .eventSkeleton .skeletonBtns {
@@ -68,7 +197,6 @@
 
 .eventSkeleton .skeletonBtns .skeletonCta {
   box-sizing: border-box;
-
   padding: 1rem;
   width: 30%;
   border-radius: 2px;

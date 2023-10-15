@@ -6,6 +6,7 @@ export default function Home() {
         <div className="homepage">
             This is the homepage
             <Event />
+            <Event />
         </div>
     )
 }

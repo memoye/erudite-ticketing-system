@@ -1,47 +1,47 @@
 import classNames from 'classnames'
-import { useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { BsSearch as SearchIcon } from 'react-icons/bs'
+import { Link, NavLink } from 'react-router-dom'
 
-export default function NavBar() {
-    const [searchOpen, setSearchOpen] = useState('searchBarClose')
+export default function NavBar({ searchOpen, setSearchOpen }) {
+    const searchField = useRef()
 
-    function toggleSearchBar() {
-        searchOpen === 'searchBarClose' ? setSearchOpen('searchBarOpen') : setSearchOpen('searchBarClose')
+
+    function handleBlur(e) {
+        // close on blur only if there is no user input
+        if (e.target.value === '') setSearchOpen('searchBarClose')
     }
+
+    useEffect(() => {
+        if (searchOpen) {
+            searchField.current.focus()
+        }
+    }, [searchOpen])
 
     return (
         <>
-            <form className={ classNames('searchBar', searchOpen) }>
+            <form
+                className={ classNames('searchBar', searchOpen) }>
                 <div>
                     <input
+                        placeholder='Search events'
                         className='searchInput'
-                        type="search"
-                        name="q"
                         id="q"
+                        name="q"
+                        type="search"
+                        ref={ searchField }
+                        onBlur={ handleBlur }
                     />
 
-                    <button
-                        className="searchBtn"
-                        onClick={ toggleSearchBar }
-                        type='button'
-                    >
-                        <SearchIcon />
-                    </button>
-
+                    <SearchIcon
+                        className='searchInputIcon'
+                    />
                 </div>
             </form>
             <nav className='navBar'>
-                <button
-                    className="searchBtn"
-                    onClick={ toggleSearchBar }
-                >
-                    <SearchIcon />
-                </button>
-                <ul>
-                    <li>Home</li>
-                    <li>Events</li>
-                </ul>
+                <NavLink>Discover</NavLink>
             </nav>
+
         </>
     )
 }
